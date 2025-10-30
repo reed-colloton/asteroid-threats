@@ -1,0 +1,1934 @@
+
+╭─── Claude Code v2.0.24 ───────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                 │ Tips for getting started                                                            │
+│                Welcome back Reed!               │ Run /init to create a CLAUDE.md file with instructions for Claude                   │
+│                                                 │ ─────────────────────────────────────────────────────────────────                   │
+│                     ▐▛███▜▌                     │ Recent activity                                                                     │
+│                    ▝▜█████▛▘                    │ No recent activity                                                                  │
+│                      ▘▘ ▝▝                      │                                                                                     │
+│                                                 │                                                                                     │
+│         Sonnet 4.5 · API Usage Billing          │                                                                                     │
+│   /…/software dev/group-project-reed-colloton   │                                                                                     │
+╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+> Lab 8: Kick start group project
+Overview
+In this lab, we will kickstart the group projects.
+
+To receive credit for this lab, you MUST show your work to the TA during the lab, and push it to the github before the deadline. 
+Please note that submissions will be due on Wednesday at 11:59 p.m. in the following week.
+
+Learning Objectives
+All of these tie in closely with the group project.
+
+ LO1. Learn how to structure an application with a GUI, database, and a middle layer connecting the UI to data, while optionally 
+integrating APIs.
+ L02. Gain practical experience in containerizing applications using Docker to ensure portability and consistency across different 
+environments.
+ L03. Develop skills in applying Agile or hybrid methodologies, such as Scrum and Kanban, to manage project tasks and team 
+collaboration effectively.
+ L04. Learn to design high-level use case diagrams and wireframes to define the application's key features, user interactions, and 
+interface layout.
+
+
+PROJECT GUIDE
+Please read the project guide alongside this writeup to get more information on the expectations for this group project
+
+Part A
+Complete Pre-Lab quiz on Canvas before your section's lab time.
+
+Part B
+In today's lab, you will work on starting off your project. Your TA will inform you of the approved project idea. You will be working
+ with your team of 4-6 students on this project for the next 4 weeks. You will submit the project proposal by the end of this lab.
+
+Managing Project repository
+Only one person per team should accept this GitHub assignment. After the repository is generated, please add your team members as 
+collaborators to the repository. This link has instructions on adding collaborators to a repository.
+
+Clone your GitHub repository
+info
+You need to accept the invite to the GitHub classroom assignment to get a repository.
+
+Github Classroom Assignment
+For the next two steps, make sure to edit the name of the repository after the copying the command into your terminal.
+Using an SSH key
+Using a Personal Access Token (PAT)
+git clone git@github.com:CU-CSCI3308-Fall2025/group-project-<YOUR_USER_NAME>.git
+
+
+Navigate to the repository on your system.
+cd group-project-<YOUR_USER_NAME>
+
+Project Overview
+Your application must have a GUI, a database, API data source(optional), a middle layer connecting your UI to your data. The code 
+should be built within Docker containers so they are portable. Make sure to consider these core requirements when designing the 
+architecture of your application. You are required to use the technology stack that you have learned in this course. Refer to the 
+project guide for detailed expectations. If you would like clarifications, please ask your instructor/TA.
+
+Deliverables
+Before starting this discussion, assign a scribe who will start a document and take notes on the items listed below. The team will 
+proofread and submit this document as your deliverable for this week. Please refer to Canvas for the due date.
+
+1. Team Number
+You have been assigned a team number, on Canvas, that is represented as your recitation section number plus a one-digit identifier. 
+This team number MUST appear on ALL deliverables/submissions posted by your team to your git repository and to Canvas.
+
+2. Team name
+You will collectively choose a name for your team to represent a vision you have for the application you're creating. It can be used 
+in addition to your Team Number for all deliverables and presentations.
+
+3. Team Members
+List the First & Last name of team members, their GitHub usernames and their email addresses.
+
+4. Application Name
+Pick a befitting name to convey the purpose of your application. To be used in all presentations(weekly to your TA and the final one)
+
+5. Application Description
+A short (2-3 paragraphs) overview description of the application. Provide enough information to explain what functionality and value 
+your product will provide to users of your application. This should help you to define the scope of your project.
+
+6. Audience
+Define the target audience for your application by identifying the characteristics of an ideal user. Clearly articulate the specific 
+problem your software aims to solve for this user group. Additionally, consider the usability and accessibility of the application, 
+ensuring that interactions are intuitive and convenient for the intended audience.
+
+Understanding their background helps shape features and design.
+
+7. Vision Statement
+A simple, one or two sentence statement describing the clear and inspirational desired state resulting from your team’s efforts to 
+create your application. Following is a template you might want to use:
+
+For [target customer], Who [statement of the need]. The [product name] is a [product category] that [key benefit, compelling reason 
+to buy]. Unlike [primary competitive alternative], our product [statement of primary differentiation]
+
+Examples
+Amazon: “To be Earth’s most customer-centric company, where customers can find and discover anything they might want to buy online.”
+Tesla: “To create the most compelling car company of the 21st century by driving the world’s transition to electric vehicles.”
+Facebook: “People use Facebook to stay connected with friends and family, to discover what’s going on in the world, and to share and 
+express what matters to them.”
+CU Boulder: “To be a leader in addressing the humanitarian, social, and technological challenges of the twenty-first century.”
+IKEA: “To create a better everyday life for many people.”
+Nordstrom: “Offer the customer the best possible service, selection,quality, and value.”
+Google: “To provide access to the world’s information in one click.”
+8. Version Control
+info
+You are required to create a public GitHub repository and add all the members of the team to it. Share the link to this repository in
+ this document.
+
+This repository should have the following folders:
+
+TeamMeetingLogs - The minutes of the meeting with your TA every week will be recorded in a file here. You will be updating the same 
+file every week with the latest updates. Points to include in the minutes would be:
+Decisions made
+Alternative actions/options discussed
+Follow-up items, including agreed-on roles and responsibilities
+MilestoneSubmissions - All course-related documents, including this one, will be stored in this folder.
+ProjectSourceCode - The source code and all relevant project documentation for the application will be stored in this folder.
+ReadMe.md - Refer to the project guide for more information on this.
+For a detailed view of your repository, refer to the project guide
+.gitignore - Please remember to create a .gitignore file in your "ProjectSourceCode" folder in the repository
+9. Development Methodology
+Since this project is scheduled for 4 weeks, we encourage you to use an Agile Methodology. You can also use a hybrid set of practices
+ from different methodologies. For example, you can use Scrum meetings and Kanban boards to track the progress of your project. The 
+important thing is to have a plan and stick to it.
+
+10. Communication Plan
+Describe in a sentence or two how your team plans to communicate with each other during the course of the project. You must identify 
+a collaboration tool for team members to utilize for coordination of their work and communication among team members and with the TA.
+ Some tools you could use: MS Teams, Slack, Discord, Google Groups, etc. Please refrain from using IMs for the purposes of this 
+project.
+
+tip
+You can track communication for project development tasks as comments on the user story issues you create on the GitHub project 
+board. That will help you remain organized.
+
+11. Meeting Plan
+Team Meeting: Identify the day(s) and time(s), mode, and location your team has agreed upon for regular meetings. “Modality” refers 
+to how you are meeting (face-to-face), group video chat (like Zoom, Google Meet), etc.
+Weekly meeting with TA: You will also mention the meeting day, time and location (physical or online) for the weekly meeting with 
+your TA here.
+Please refer to these instructions for expectations in your weekly meeting with your TAs. Do read the entire section carefully.
+12. Use Case Diagram
+Create a high-level Use Case Diagram for your application. Your diagram must show at least 6 key features of your application.
+
+This activity should help you identify the end users of the application and the ways they would interact with the system. You can 
+reference the examples covered in class. This will also help you scope out the features of your application. You can refer to this 
+page for more information on how to create a Use Case Diagram.
+
+13. Wireframes
+You will create wireframes for each page of the application.
+
+Wireframes are low-fidelity visual representations of the user interface of your application. They are used to plan the layout of the
+ application and to communicate the flow of the application to the team. You can use any tool of your choice to create the 
+wireframes. Hand sketched wireframes are also acceptable. You can refer to this for more information on why and how to create 
+wireframes.
+
+Part C
+There is no part C for this lab 🎉
+
+Extra Credit
+Identify at least five potential risks related to your project. For each risk, describe its severity and outline suitable mitigation 
+strategies to address it.
+
+Submission Guidelines
+Commit and upload your changes
+Upload your file(s), containing all the requested information above, in the milestone submissions folder of your project repository.
+
+Run the following commands in the root of the project git directory (that you created).
+
+git add .
+git commit -m "Adding project proposal"
+git push
+
+Go to Github and verify that all the files/folders for the lab have been successfully uploaded to the remote repository.
+Regrade Requests
+Please use this link to raise a regrade request if you think you didn't receive a correct grade. If you received a lower than 
+expected grade because of missing/not updated files, please do not submit a regrade request as they will not be considered for 
+reevaluation.
+
+Grading Specifications
+Not attempted
+
+Student has not attempted the lab OR
+Student has not attended the lab without prior approval
+Below Expectations - If any of the following conditions are met
+
+Part A
+Quiz has not been attempted OR
+Quiz has been attempted, but
+The answer to the questions are partially correct
+Part B
+Student has not attended the duration of the lab
+Student's work was not reviewed by the TA
+Student has not uploaded their work to the GitHub repository OR
+Student has not uploaded/created one or more the required files/folders OR
+Files are not representative of the student's attempt at the activity
+Meets Expectations - if all of the specified conditions are met
+
+Part A
+Pre-Lab Quiz has been completed
+Quiz responses demonstrate appropriate understanding of the concepts
+Part B
+Student should have attended the duration of the lab
+Student's work should have been reviewed by the TA and attendance should be marked on Canvas
+Students have clearly included all the details for #1-7 & #9-11 as requested on the writeup
+Students have created all the files/folders as requested in the repository for #8
+Students have included a use case diagram that represents at least 6 key features of the application for #12
+Students have included clearly drawn wireframes for all the pages of the application for #13
+These can be hand drawn
+Exceeds Expectations
+
+All conditions in "Meets Expectations" are met AND
+Extra Credit work has been completed:
+Students have clearly outlined 5 risks associated with their project
+Students have listed the severity for each risk
+Students have mentioned appropriate mitigation strategies for each risk 
+
+⏺ I've reviewed the Lab 8 instructions for your group project kickstart. This looks like a comprehensive assignment that requires you
+   to:
+
+  1. Set up a team and repository structure
+  2. Define your application (name, description, vision, target audience)
+  3. Create technical documentation (use case diagram, wireframes)
+  4. Establish project management processes (communication plan, meeting schedules, development methodology)
+
+  How can I help you with this lab? For example, I can:
+
+  - Help set up the required folder structure in your repository
+  - Create template documents for your deliverables
+  - Assist with creating use case diagrams or wireframes
+  - Help draft any of the required sections (vision statement, application description, etc.)
+  - Set up the .gitignore file for your ProjectSourceCode folder
+  - Help with the README.md structure
+
+  What would you like to work on first?
+
+> do it all so it passes critera 
+
+⏺ I'll help you complete all the lab requirements. Let me create a comprehensive todo list and get started.
+
+⏺ Bash(mkdir -p TeamMeetingLogs MilestoneSubmissions ProjectSourceCode)
+  ⎿  (No content)
+
+⏺ Write(ProjectSourceCode/.gitignore)
+  ⎿  Wrote 63 lines to ProjectSourceCode/.gitignore
+     # Dependencies
+     node_modules/
+     npm-debug.log*
+     yarn-debug.log*
+     yarn-error.log*
+     # Environment variables
+     .env
+     .env.local
+     .env.development
+     … +53 lines (ctrl+o to expand)
+
+⏺ Write(README.md)
+  ⎿  Error: File has been unexpectedly modified. Read it again before attempting to write it.
+
+⏺ Read(README.md)
+  ⎿  Read 2 lines
+
+⏺ Write(README.md)
+  ⎿  Updated README.md with 94 additions                                                                                       
+        1 +  # [Application Name]
+        2    
+        3 +  ## Team Information
+        4 +  
+        5 +  **Team Number:** [Your Team Number]
+        6 +  
+        7 +  **Team Name:** [Your Team Name]
+        8 +  
+        9 +  **Team Members:**
+       10 +  - [Member 1 Name] - [GitHub Username] - [Email]
+       11 +  - [Member 2 Name] - [GitHub Username] - [Email]
+       12 +  - [Member 3 Name] - [GitHub Username] - [Email]
+       13 +  - [Member 4 Name] - [GitHub Username] - [Email]
+       14 +  
+       15 +  ## Project Description
+       16 +  
+       17 +  [Brief 2-3 paragraph description of your application, its purpose, and the value it provides to users]
+       18 +  
+       19 +  ## Vision Statement
+       20 +  
+       21 +  For [target customer], who [statement of need], [product name] is a [product category] that [key benefit]. Unlike 
+          + [primary competitive alternative], our product [statement of primary differentiation].
+       22 +  
+       23 +  ## Technology Stack
+       24 +  
+       25 +  - **Frontend:** HTML, CSS, JavaScript
+       26 +  - **Backend:** Node.js, Express
+       27 +  - **Database:** PostgreSQL
+       28 +  - **Containerization:** Docker
+       29 +  - **Version Control:** Git/GitHub
+       30 +  
+       31 +  ## Prerequisites
+       32 +  
+       33 +  - Docker and Docker Compose installed
+       34 +  - Git installed
+       35 +  - Node.js (for local development)
+       36 +  
+       37 +  ## Installation & Setup
+       38 +  
+       39 +  1. Clone the repository:
+       40 +  ```bash
+       41 +  git clone [repository-url]
+       42 +  cd group-project-[username]
+       43 +  ```
+       44 +  
+       45 +  2. Navigate to the project source code:
+       46 +  ```bash
+       47 +  cd ProjectSourceCode
+       48 +  ```
+       49 +  
+       50 +  3. Build and run the application using Docker:
+       51 +  ```bash
+       52 +  docker-compose up -d
+       53 +  ```
+       54 +  
+       55 +  4. Access the application at `http://localhost:3000`
+       56 +  
+       57 +  ## Project Structure
+       58 +  
+       59 +  ```
+       60 +  .
+       61 +  ├── TeamMeetingLogs/          # Weekly meeting minutes with TA
+       62 +  ├── MilestoneSubmissions/     # Course deliverables and documentation
+       63 +  ├── ProjectSourceCode/        # Application source code
+       64 +  │   ├── src/                  # Source files
+       65 +  │   ├── public/               # Static assets
+       66 +  │   ├── docker-compose.yaml   # Docker configuration
+       67 +  │   └── .gitignore           # Git ignore rules
+       68 +  └── README.md                 # This file
+       69 +  ```
+       70 +  
+       71 +  ## Running Tests
+       72 +  
+       73 +  ```bash
+       74 +  npm test
+       75 +  ```
+       76 +  
+       77 +  ## Development Methodology
+       78 +  
+       79 +  [Description of your Agile/Scrum/Kanban approach]
+       80 +  
+       81 +  ## Communication
+       82 +  
+       83 +  **Primary Tool:** [Slack/Discord/MS Teams]
+       84 +  
+       85 +  **Team Meetings:** [Day, Time, Location/Mode]
+       86 +  
+       87 +  **TA Meetings:** [Day, Time, Location/Mode]
+       88 +  
+       89 +  ## Contributors
+       90 +  
+       91 +  All team members contribute equally to this project. See commit history for detailed contributions.
+       92 +  
+       93 +  ## License
+       94 +  
+       95 +  This project is created for educational purposes as part of CSCI 3308 at CU Boulder.
+
+⏺ Write(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Wrote 649 lines to MilestoneSubmissions/ProjectProposal.md                    
+     # Project Proposal - Lab 8
+     ## 1. Team Number
+     **Team Number:** [Insert your team number - e.g., Section# + digit identifier]
+     ## 2. Team Name
+     **Team Name:** [Insert your chosen team name]
+     ## 3. Team Members
+     … +639 lines (ctrl+o to expand)
+
+> use this for the wireframe and usecase diagram 
+
+> https://threats-astr-3e2d034bcc4b.herokuapp.com/ 
+
+⏺ Let me check out the application you linked to understand what we're building!
+
+⏺ Fetch(https://threats-astr-3e2d034bcc4b.herokuapp.com/)
+  ⎿  Received 1.9KB (200 OK)
+
+⏺ Perfect! I can see this is an Asteroid Threat Monitoring application. Let me update the project proposal with the specific details
+  for this application.
+
+⏺ Read(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Read 100 lines
+
+⏺ Update(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Updated MilestoneSubmissions/ProjectProposal.md with 3 additions and 3 removals       
+        1    # Project Proposal - Lab 8
+        2    
+        3    ## 1. Team Number
+        4 -  **Team Number:** [Insert your team number - e.g., Section# + digit identifier]
+        4 +  **Team Number:** 16-4
+        5    
+        6    ## 2. Team Name
+        7 -  **Team Name:** [Insert your chosen team name]
+        7 +  **Team Name:** Woodwinds
+        8    
+        9    ## 3. Team Members
+       10    
+     ...
+       16    | [Member 4 Full Name] | [username4] | [email4@colorado.edu] |
+       17    
+       18    ## 4. Application Name
+       19 -  **Application Name:** [Insert your application name]
+       19 +  **Application Name:** Asteroid Threat Tracker (ATT)
+       20    
+       21    ## 5. Application Description
+       22    
+
+⏺ Update(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Updated MilestoneSubmissions/ProjectProposal.md with 3 additions and 12 removals                                             
+       20    
+       21    ## 5. Application Description
+       22    
+       23 -  [Write 2-3 paragraphs describing your application]
+       23 +  The Asteroid Threat Tracker (ATT) is a web-based application designed to monitor and display information about 
+          + potentially hazardous near-Earth asteroids that pose threats to our planet. The application provides users with 
+          + comprehensive data about asteroid trajectories, impact probabilities, and threat assessments across multiple time 
+          + horizons. By aggregating data from space agencies and astronomical databases, ATT serves as a centralized platform for
+          +  tracking celestial threats and raising public awareness about planetary defense.
+       24    
+       25 -  **Paragraph 1:** Describe what your application does and its main purpose. What problem does it solve? What is the 
+          - core functionality?
+       25 +  The application features an intuitive interface that allows users to filter asteroid threats by different time 
+          + periods (2030, 2040, 2050, 2075, 2100, 2150, and 2200), categorize asteroids by threat level ("Top Threats" vs "High 
+          + Chance"), and view detailed information about each near-Earth object including size, velocity, trajectory, and impact 
+          + probability. Users can explore the "Top 10 Earth Threat Asteroids" through an interactive display that presents 
+          + critical data in an accessible format. The system will pull real-time data from NASA's Near-Earth Object (NEO) API and
+          +  other astronomical data sources, storing historical records in a database for trend analysis and comparison.
+       26    
+       27 -  **Paragraph 2:** Explain the key features and capabilities. How will users interact with the application? What makes 
+          - it valuable?
+       27 +  Within the 4-week development cycle, we will implement the core data retrieval and display functionality, database 
+          + integration for storing asteroid information, user interface with temporal filtering capabilities, and a responsive 
+          + design that works across devices. The application will be built using Node.js/Express for the backend API layer, 
+          + PostgreSQL for persistent data storage, HTML/CSS/JavaScript for the frontend, and will integrate with NASA's NEO API 
+          + as an external data source. All components will be containerized using Docker to ensure portability and consistent 
+          + deployment across different environments.
+       28    
+       29 -  **Paragraph 3:** Discuss the scope of your project. What will be included in this 4-week development cycle? What 
+          - technologies will you leverage?
+       30 -  
+       31 -  **Example:**
+       32 -  > Our application is a comprehensive task management system designed for college students to organize their academic 
+          - responsibilities, track deadlines, and collaborate on group projects. The platform integrates calendar functionality, 
+          - project boards, and real-time notifications to help students stay on top of their coursework and commitments.
+       33 -  >
+       34 -  > Key features include personalized dashboards, assignment tracking with priority levels, integration with course 
+          - management systems, collaborative workspaces for group projects, and automated deadline reminders. Users can create 
+          - tasks, set due dates, assign them to categories (classes), and share project boards with classmates for seamless 
+          - collaboration.
+       35 -  >
+       36 -  > Within the 4-week development cycle, we will implement the core task management functionality, user authentication,
+          -  database integration, and a responsive web interface. The application will be built using Node.js/Express for the 
+          - backend, PostgreSQL for data storage, and a modern frontend framework, all containerized using Docker for easy 
+          - deployment and portability.
+       37 -  
+       29    ## 6. Audience
+       30    
+       31    **Target User Profile:**
+
+⏺ Update(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Updated MilestoneSubmissions/ProjectProposal.md with 9 additions and 18 removals                                             
+       30    
+       31    **Target User Profile:**
+       32    
+       33 -  **Who:** [Describe your ideal user - demographics, role, context]
+       33 +  **Who:** Space enthusiasts, educators, students, science journalists, and general public interested in astronomy and 
+          + planetary defense. The primary demographic ranges from high school students to adults of all ages who have an interest
+          +  in space science but may not have advanced technical or astronomical knowledge. Secondary users include science 
+          + teachers looking for educational resources and amateur astronomers tracking near-Earth objects.
+       34    
+       35 -  **Problem Being Solved:** [What specific pain point or need does your application address for this audience?]
+       35 +  **Problem Being Solved:** Information about potentially hazardous asteroids is scattered across multiple technical 
+          + sources like NASA's JPL database, scientific papers, and specialized astronomical software. This data is often 
+          + presented in technical formats that are difficult for non-experts to interpret and compare. There is no centralized, 
+          + user-friendly platform that presents asteroid threat information in an accessible way while allowing users to explore 
+          + threats across different time horizons. People interested in planetary defense and space threats lack a simple tool to
+          +  understand which asteroids pose the greatest risks and when.
+       36    
+       37    **Usability & Accessibility Considerations:**
+       38 -  - [List specific considerations for making the app intuitive for your target audience]
+       39 -  - [How will you ensure convenient interactions?]
+       40 -  - [What accessibility features will you consider?]
+       38 +  - Clean, intuitive interface that doesn't require astronomical expertise to navigate
+       39 +  - Clear visual indicators for threat levels using color coding and icons
+       40 +  - Mobile-responsive design for users to check asteroid information on any device
+       41 +  - Simple temporal navigation allowing quick switching between time periods
+       42 +  - Accessible data presentation with both visual and textual information
+       43 +  - Fast loading times and efficient data presentation to maintain user engagement
+       44 +  - "Pull to refresh" functionality for mobile users to get latest data updates
+       45    
+       46 -  **Example:**
+       47 -  > **Who:** College students aged 18-25 who are juggling multiple courses, assignments, and group projects 
+          - simultaneously. These users are tech-savvy but often overwhelmed by competing deadlines and lack effective tools to 
+          - manage academic workload.
+       48 -  >
+       49 -  > **Problem Being Solved:** Students struggle to keep track of assignment due dates across multiple courses, often 
+          - missing deadlines or experiencing last-minute stress. Group projects suffer from poor coordination and lack of 
+          - centralized task tracking. Existing solutions are either too complex (enterprise tools) or too simple (basic to-do 
+          - lists) for the specific needs of academic work.
+       50 -  >
+       51 -  > **Usability & Accessibility Considerations:**
+       52 -  > - Intuitive, mobile-responsive design that works on phones, tablets, and laptops
+       53 -  > - Quick task creation with minimal clicks to accommodate busy schedules
+       54 -  > - Visual priority indicators and color coding for immediate understanding
+       55 -  > - Keyboard shortcuts for power users
+       56 -  > - Clear typography and sufficient color contrast for readability
+       57 -  > - Simple onboarding process requiring minimal setup time
+       58 -  
+       46    ## 7. Vision Statement
+       47    
+       48    **Vision Statement:** For [target customer], who [statement of need], [product name] is a [product category] that 
+            [key benefit]. Unlike [primary competitive alternative], our product [statement of primary differentiation].
+
+⏺ Update(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Updated MilestoneSubmissions/ProjectProposal.md with 1 addition and 4 removals                                               
+       45    
+       46    ## 7. Vision Statement
+       47    
+       48 -  **Vision Statement:** For [target customer], who [statement of need], [product name] is a [product category] that 
+          - [key benefit]. Unlike [primary competitive alternative], our product [statement of primary differentiation].
+       48 +  For space enthusiasts and the general public, who want to stay informed about potentially hazardous near-Earth 
+          + asteroids but find existing data sources too technical and fragmented, Asteroid Threat Tracker is a web-based 
+          + monitoring platform that provides accessible, consolidated information about Earth-threatening asteroids across 
+          + multiple time horizons. Unlike NASA's technical JPL databases or complex astronomical software, our product presents 
+          + threat data in an intuitive, visually engaging format that anyone can understand, with the ability to explore asteroid
+          +  risks from the present day through the year 2200.
+       49    
+       50 -  **Example:**
+       51 -  > For college students, who struggle to manage multiple academic deadlines and group project coordination, TaskMaster
+          -  is a task management application that provides streamlined, education-focused organization tools with seamless 
+          - collaboration features. Unlike generic productivity apps like Todoist or complex project management tools like Jira, 
+          - our product is specifically designed for the academic context with features like course integration, semester-based 
+          - organization, and student-friendly collaboration without enterprise complexity.
+       52 -  
+       50    ## 8. Version Control
+       51    
+       52    **GitHub Repository:** [Insert your repository URL]
+
+⏺ Read(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Read 150 lines
+
+⏺ Update(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Updated MilestoneSubmissions/ProjectProposal.md with 26 additions and 21 removals                                            
+       169    Our application includes the following key use cases:
+       170    
+       171    **Actors:**
+       172 -  - Primary User (Student)
+       173 -  - System Administrator
+       174 -  - External Calendar API (optional)
+       172 +  - Primary User (Space Enthusiast/General Public)
+       173 +  - System (Backend scheduler)
+       174 +  - NASA NEO API (External data source)
+       175    
+       176    **Use Cases:**
+       177    
+       178 -  1. **User Authentication**
+       179 -     - Description: User can register, log in, and log out of the application
+       178 +  1. **View Asteroid Threat List**
+       179 +     - Description: User can view a list of potentially hazardous asteroids ranked by threat level
+       180       - Actor: Primary User
+       181 -     - Flow: User provides credentials → System validates → User gains access
+       181 +     - Flow: User accesses application → System displays top 10 threatening asteroids with key data → User can scroll 
+           + and view details
+       182    
+       183 -  2. **Manage Tasks**
+       184 -     - Description: User can create, read, update, and delete tasks
+       183 +  2. **Filter by Time Period**
+       184 +     - Description: User can filter asteroid threats by different time horizons
+       185       - Actor: Primary User
+       186 -     - Flow: User creates task with title, description, due date, priority → System stores task → User can 
+           - view/edit/delete task
+       186 +     - Flow: User selects time period (Forever, 2030, 2040, 2050, 2075, 2100, 2150, 2200) → System filters and 
+           + displays relevant asteroids for that timeframe
+       187    
+       188 -  3. **Organize by Categories**
+       189 -     - Description: User can categorize tasks (e.g., by course or project)
+       188 +  3. **View Detailed Asteroid Information**
+       189 +     - Description: User can click on an asteroid to view comprehensive details
+       190       - Actor: Primary User
+       191 -     - Flow: User creates categories → Assigns tasks to categories → Filters view by category
+       191 +     - Flow: User selects asteroid from list → System displays detailed information including size, velocity, orbit, 
+           + impact probability, and approach date
+       192    
+       193 -  4. **Set Reminders and Notifications**
+       194 -     - Description: System sends notifications for upcoming deadlines
+       193 +  4. **Categorize Threats**
+       194 +     - Description: System categorizes asteroids into "Top Threats" and "High Chance" groups
+       195       - Actor: Primary User, System
+       196 -     - Flow: User sets reminder preferences → System monitors deadlines → System sends notifications
+       196 +     - Flow: User toggles between threat categories → System displays asteroids filtered by threat classification
+       197    
+       198 -  5. **Collaborate on Projects**
+       199 -     - Description: Users can create shared project boards and assign tasks to team members
+       198 +  5. **Refresh Data**
+       199 +     - Description: User can refresh to retrieve the latest asteroid data from NASA
+       200 +     - Actor: Primary User, NASA NEO API
+       201 +     - Flow: User initiates refresh (pull-to-refresh or button) → System queries NASA API → Updates database → 
+           + Displays fresh data
+       202 +  
+       203 +  6. **Browse Historical Data**
+       204 +     - Description: User can view historical asteroid approach data and compare threat levels over time
+       205       - Actor: Primary User
+       206 -     - Flow: User creates shared project → Invites collaborators → Team members can add/edit shared tasks
+       206 +     - Flow: User navigates to historical view → System retrieves stored data from database → Displays trends and past
+           +  assessments
+       207    
+       208 -  6. **View Dashboard and Analytics**
+       209 -     - Description: User can view personalized dashboard with upcoming tasks and completion statistics
+       208 +  7. **Search Asteroids**
+       209 +     - Description: User can search for specific asteroids by name or designation
+       210       - Actor: Primary User
+       211 -     - Flow: User navigates to dashboard → System displays prioritized tasks and visualizations
+       211 +     - Flow: User enters asteroid name/ID in search → System queries database → Displays matching asteroid(s) with 
+           + full details
+       212    
+       213    **Use Case Diagram:**
+       214    
+
+⏺ Update(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Updated MilestoneSubmissions/ProjectProposal.md with 40 additions and 41 removals              
+       213    **Use Case Diagram:**
+       214    
+       215    ```
+       216 -                                      Task Management System
+       217 -                      ┌─────────────────────────────────────────────────┐
+       218 -                      │                                                 │
+       219 -  ┌──────────┐        │   ┌──────────────────────────┐                │
+       220 -  │          │        │   │   User Authentication    │                │
+       221 -  │          │───────────>│  (Register/Login/Logout) │                │
+       222 -  │          │        │   └──────────────────────────┘                │
+       223 -  │          │        │                                                 │
+       224 -  │          │        │   ┌──────────────────────────┐                │
+       225 -  │ Primary  │        │   │     Manage Tasks         │                │
+       226 -  │   User   │───────────>│ (Create/Read/Update/     │                │
+       227 -  │ (Student)│        │   │       Delete)            │                │
+       228 -  │          │        │   └──────────────────────────┘                │
+       229 -  │          │        │                                                 │
+       230 -  │          │        │   ┌──────────────────────────┐                │
+       231 -  │          │───────────>│  Organize by Categories  │                │
+       232 -  │          │        │   │   (Course/Project)       │                │
+       233 -  │          │        │   └──────────────────────────┘                │
+       234 -  │          │        │                                                 │
+       235 -  │          │        │   ┌──────────────────────────┐                │
+       236 -  │          │───────────>│  Set Reminders and       │<───────────────│────────────┐
+       237 -  │          │        │   │    Notifications         │                │            │
+       238 -  │          │        │   └──────────────────────────┘                │            │
+       239 -  │          │        │                                                 │            │
+       240 -  │          │        │   ┌──────────────────────────┐                │            │
+       241 -  │          │───────────>│  Collaborate on Projects │                │            │
+       242 -  │          │        │   │ (Shared Task Boards)     │                │            │
+       243 -  └──────────┘        │   └──────────────────────────┘                │            │
+       244 -                      │                                                 │            │
+       245 -  ┌──────────┐        │   ┌──────────────────────────┐                │     ┌──────────┐
+       246 -  │  System  │        │   │  View Dashboard and      │                │     │  System  │
+       247 -  │  Admin   │───────────>│      Analytics           │                │     │  (Timer) │
+       248 -  │          │        │   │  (Statistics/Insights)   │                │     └──────────┘
+       249 -  └──────────┘        │   └──────────────────────────┘                │
+       250 -                      │                                                 │
+       251 -                      │   ┌──────────────────────────┐                │
+       252 -                      │   │   Manage User Accounts   │                │
+       253 -                      │   │  (Admin Functions)       │                │
+       254 -                      │   └──────────────────────────┘                │
+       255 -                      │                                                 │
+       256 -                      └─────────────────────────────────────────────────┘
+       216 +                              Asteroid Threat Tracker System
+       217 +              ┌───────────────────────────────────────────────────────────┐
+       218 +              │                                                           │
+       219 +  ┌──────────┐│   ┌────────────────────────────┐                        │
+       220 +  │          ││   │  View Asteroid Threat List │                        │
+       221 +  │          │└──>│   (Top 10 Threats)         │                        │
+       222 +  │          │    └────────────────────────────┘                        │
+       223 +  │          │                                                            │
+       224 +  │          │    ┌────────────────────────────┐                        │
+       225 +  │ Primary  │───>│   Filter by Time Period    │                        │
+       226 +  │   User   │    │ (2030/2040/.../Forever)    │                        │
+       227 +  │  (Space  │    └────────────────────────────┘                        │
+       228 +  │Enthusiast│                                                            │
+       229 +  │          │    ┌────────────────────────────┐                        │
+       230 +  │          │───>│ View Detailed Asteroid Info│                        │
+       231 +  │          │    │ (Size/Velocity/Trajectory) │                        │
+       232 +  │          │    └────────────────────────────┘                        │
+       233 +  │          │                                                            │
+       234 +  │          │    ┌────────────────────────────┐                        │
+       235 +  │          │───>│   Categorize Threats       │                        │
+       236 +  │          │    │ (Top Threats/High Chance)  │                        │
+       237 +  │          │    └────────────────────────────┘                        │
+       238 +  │          │                                                            │
+       239 +  │          │    ┌────────────────────────────┐      ┌──────────────┐ │
+       240 +  │          │───>│      Refresh Data          │<─────│  NASA NEO    │ │
+       241 +  │          │    │   (Pull from NASA API)     │      │     API      │ │
+       242 +  └──────────┘    └────────────────────────────┘      └──────────────┘ │
+       243 +                                                                          │
+       244 +  ┌──────────┐    ┌────────────────────────────┐                        │
+       245 +  │  System  │───>│  Browse Historical Data    │                        │
+       246 +  │(Scheduler│    │  (Past Threat Assessments) │                        │
+       247 +  │          │    └────────────────────────────┘                        │
+       248 +  └──────────┘                                                            │
+       249 +                  ┌────────────────────────────┐                        │
+       250 +  ┌──────────┐    │    Search Asteroids        │                        │
+       251 +  │ Primary  │───>│   (By Name/Designation)    │                        │
+       252 +  │   User   │    └────────────────────────────┘                        │
+       253 +  └──────────┘                                                            │
+       254 +                                                                          │
+       255 +              └───────────────────────────────────────────────────────────┘
+       256    ```
+       257    
+       258    **Notes:**
+
+⏺ Now let me update the wireframes to match the Asteroid Threat Tracker application:
+
+⏺ Update(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Updated MilestoneSubmissions/ProjectProposal.md with 31 additions and 28 removals        
+       266    
+       267    Below are wireframes for each page of the application:
+       268    
+       269 -  #### 13.1 Login/Registration Page
+       269 +  #### 13.1 Main Threat Dashboard Page
+       270    
+       271    ```
+       272 -  ┌─────────────────────────────────────────────────────────┐
+       273 -  │                                                         │
+       274 -  │                    [Application Logo]                   │
+       275 -  │                                                         │
+       276 -  │                    Welcome to TaskMaster                │
+       277 -  │                                                         │
+       278 -  │           ┌──────────────────────────────┐             │
+       279 -  │           │  Email: ________________     │             │
+       280 -  │           │                              │             │
+       281 -  │           │  Password: ____________      │             │
+       282 -  │           │                              │             │
+       283 -  │           │  [  Login  ]  [ Register ]   │             │
+       284 -  │           │                              │             │
+       285 -  │           │  [ ] Remember me             │             │
+       286 -  │           │                              │             │
+       287 -  │           │  Forgot password?            │             │
+       288 -  │           └──────────────────────────────┘             │
+       289 -  │                                                         │
+       290 -  └─────────────────────────────────────────────────────────┘
+       272 +  ┌────────────────────────────────────────────────────────────────┐
+       273 +  │  ☄ ASTEROID THREAT TRACKER                    [Search] [About]│
+       274 +  ├────────────────────────────────────────────────────────────────┤
+       275 +  │                                                                │
+       276 +  │           TOP 10 EARTH THREAT ASTEROIDS                        │
+       277 +  │                                                                │
+       278 +  │  Time Period Filter:                                          │
+       279 +  │  [Forever][2030][2040][2050][2075][2100][2150][2200]        │
+       280 +  │                                                                │
+       281 +  │  Category: [Top Threats ▼]  [Refresh Data ↻]                 │
+       282 +  │                                                                │
+       283 +  │  ┌──────────────────────────────────────────────────────┐   │
+       284 +  │  │  Loading asteroid data...                            │   │
+       285 +  │  │                                                        │   │
+       286 +  │  │  (Spinner animation)                                   │   │
+       287 +  │  │                                                        │   │
+       288 +  │  │  Fetching latest threat information from NASA NEO API │   │
+       289 +  │  └──────────────────────────────────────────────────────┘   │
+       290 +  │                                                                │
+       291 +  │  ⚠ Pull to refresh                                            │
+       292 +  │                                                                │
+       293 +  └────────────────────────────────────────────────────────────────┘
+       294    ```
+       295    
+       296    **Elements:**
+       297 -  - Application logo/branding
+       298 -  - Email input field
+       299 -  - Password input field
+       300 -  - Login button
+       301 -  - Register button (navigates to registration form)
+       302 -  - Remember me checkbox
+       303 -  - Forgot password link
+       297 +  - Header with application branding and navigation
+       298 +  - Title "TOP 10 EARTH THREAT ASTEROIDS"
+       299 +  - Time period filter buttons (Forever, 2030, 2040, 2050, 2075, 2100, 2150, 2200)
+       300 +  - Category dropdown (Top Threats / High Chance)
+       301 +  - Refresh button
+       302 +  - Loading state with spinner
+       303 +  - Pull-to-refresh indicator
+       304    
+       305    ---
+       306    
+       307 -  #### 13.2 Dashboard/Home Page
+       307 +  #### 13.2 Threat List View (Data Loaded)
+       308    
+       309    ```
+       310    ┌─────────────────────────────────────────────────────────────────┐
+
+⏺ Read(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Read 100 lines
+
+⏺ Update(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Updated MilestoneSubmissions/ProjectProposal.md with 49 additions and 38 removals
+       307    #### 13.2 Threat List View (Data Loaded)
+       308    
+       309    ```
+       310 -  ┌─────────────────────────────────────────────────────────────────┐
+       311 -  │  [Logo]  Dashboard  Tasks  Projects  Settings  [User] Logout    │
+       312 -  ├─────────────────────────────────────────────────────────────────┤
+       313 -  │                                                                   │
+       314 -  │  Welcome back, [User Name]!                                      │
+       315 -  │                                                                   │
+       316 -  │  ┌──────────────────────────┐  ┌───────────────────────────┐   │
+       317 -  │  │   Today's Tasks (5)      │  │   Upcoming Deadlines      │   │
+       318 -  │  ├──────────────────────────┤  ├───────────────────────────┤   │
+       319 -  │  │ [ ] Read Chapter 5       │  │ Oct 25: Project Proposal  │   │
+       320 -  │  │     Due: 11:59 PM        │  │ Oct 28: Lab 9 Due         │   │
+       321 -  │  │                          │  │ Oct 30: Midterm Exam      │   │
+       322 -  │  │ [ ] Complete Lab 8       │  │ Nov 2:  Essay Draft       │   │
+       323 -  │  │     Due: 11:59 PM        │  │                           │   │
+       324 -  │  │                          │  └───────────────────────────┘   │
+       325 -  │  │ [ ] Team Meeting         │                                   │
+       326 -  │  │     3:00 PM              │  ┌───────────────────────────┐   │
+       327 -  │  └──────────────────────────┘  │   Task Completion         │   │
+       328 -  │                                 │        Stats              │   │
+       329 -  │  ┌──────────────────────────┐  │                           │   │
+       330 -  │  │   Active Projects (3)    │  │   [Progress Chart]        │   │
+       331 -  │  ├──────────────────────────┤  │   Completed: 45/60        │   │
+       332 -  │  │ CSCI 3308 Group Project  │  │   Completion Rate: 75%    │   │
+       333 -  │  │ [Progress Bar 60%]       │  │                           │   │
+       334 -  │  │                          │  └───────────────────────────┘   │
+       335 -  │  │ Physics Lab Report       │                                   │
+       336 -  │  │ [Progress Bar 30%]       │  [ + Create New Task ]           │
+       337 -  │  └──────────────────────────┘                                   │
+       338 -  │                                                                   │
+       339 -  └─────────────────────────────────────────────────────────────────┘
+       310 +  ┌────────────────────────────────────────────────────────────────┐
+       311 +  │  ☄ ASTEROID THREAT TRACKER                    [Search] [About]│
+       312 +  ├────────────────────────────────────────────────────────────────┤
+       313 +  │                                                                │
+       314 +  │           TOP 10 EARTH THREAT ASTEROIDS                        │
+       315 +  │                                                                │
+       316 +  │  Time Period Filter:                                          │
+       317 +  │  [Forever][[2030]][[2040]][2050][2075][2100][2150][2200]     │
+       318 +  │                          ^Selected                             │
+       319 +  │  Category: [Top Threats ▼]  [Refresh Data ↻]                 │
+       320 +  │  Last updated: Oct 23, 2024 10:30 AM                          │
+       321 +  │                                                                │
+       322 +  │  ┌──────────────────────────────────────────────────────────┐│
+       323 +  │  │ #1  🔴 (29075) 1950 DA                        [View More]││
+       324 +  │  │     Impact Probability: 0.0029% (1 in 34,500)            ││
+       325 +  │  │     Closest Approach: March 16, 2032                      ││
+       326 +  │  │     Estimated Diameter: 1.3 km                            ││
+       327 +  │  │     Velocity: 15.2 km/s                                   ││
+       328 +  │  ├──────────────────────────────────────────────────────────┤│
+       329 +  │  │ #2  🟠 Apophis (99942)                        [View More]││
+       330 +  │  │     Impact Probability: 0.00067%                          ││
+       331 +  │  │     Closest Approach: April 13, 2029                      ││
+       332 +  │  │     Estimated Diameter: 370 m                             ││
+       333 +  │  │     Velocity: 7.4 km/s                                    ││
+       334 +  │  ├──────────────────────────────────────────────────────────┤│
+       335 +  │  │ #3  🟠 Bennu (101955)                         [View More]││
+       336 +  │  │     Impact Probability: 0.037% (1 in 2,700)              ││
+       337 +  │  │     Closest Approach: September 24, 2035                  ││
+       338 +  │  │     Estimated Diameter: 490 m                             ││
+       339 +  │  │     Velocity: 28.6 km/s                                   ││
+       340 +  │  └──────────────────────────────────────────────────────────┘│
+       341 +  │                                                                │
+       342 +  │  ⬇ Scroll for more threats (7 remaining)                      │
+       343 +  │                                                                │
+       344 +  └────────────────────────────────────────────────────────────────┘
+       345    ```
+       346    
+       347    **Elements:**
+       348 -  - Navigation bar with links to main sections
+       349 -  - Welcome message with user name
+       350 -  - Today's tasks list with checkboxes
+       351 -  - Upcoming deadlines widget
+       352 -  - Active projects with progress indicators
+       353 -  - Task completion statistics/charts
+       354 -  - Quick action button to create new task
+       348 +  - Header with branding and navigation
+       349 +  - Active time period filter showing selected state
+       350 +  - Category dropdown for threat classification
+       351 +  - Last updated timestamp
+       352 +  - Ranked list of asteroids (#1, #2, #3...) with:
+       353 +    - Threat level indicator (colored circle: 🔴 high, 🟠 medium)
+       354 +    - Asteroid name and designation
+       355 +    - Impact probability percentage
+       356 +    - Closest approach date
+       357 +    - Estimated diameter
+       358 +    - Velocity
+       359 +    - "View More" button for detailed information
+       360 +  - Scroll indicator showing more content below
+       361    
+       362    ---
+       363    
+       364 -  #### 13.3 Task List Page
+       364 +  #### 13.3 Detailed Asteroid View
+       365    
+       366    ```
+       367    ┌─────────────────────────────────────────────────────────────────┐
+
+⏺ Read(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Read 150 lines
+
+⏺ Update(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Updated MilestoneSubmissions/ProjectProposal.md with 47 additions and 48 removals
+       364    #### 13.3 Detailed Asteroid View
+       365    
+       366    ```
+       367 -  ┌─────────────────────────────────────────────────────────────────┐
+       368 -  │  [Logo]  Dashboard  Tasks  Projects  Settings  [User] Logout    │
+       369 -  ├─────────────────────────────────────────────────────────────────┤
+       370 -  │                                                                   │
+       371 -  │  My Tasks                            [ + New Task ]              │
+       372 -  │                                                                   │
+       373 -  │  Filters: [All] [Today] [This Week] [Completed]                 │
+       374 -  │  Sort by: [Due Date ▼]                                          │
+       375 -  │  Category: [All Courses ▼]                                      │
+       376 -  │                                                                   │
+       377 -  │  ┌─────────────────────────────────────────────────────────┐   │
+       378 -  │  │ [ ] Complete Lab 8 - Software Development            [⚠]│   │
+       379 -  │  │     CSCI 3308                                              │   │
+       380 -  │  │     Due: Oct 23, 11:59 PM                                 │   │
+       381 -  │  │     [Edit] [Delete]                                       │   │
+       382 -  │  ├─────────────────────────────────────────────────────────┤   │
+       383 -  │  │ [ ] Read Chapter 5 - Data Structures              [📘] │   │
+       384 -  │  │     CSCI 2270                                              │   │
+       385 -  │  │     Due: Oct 24, 11:59 PM                                 │   │
+       386 -  │  │     [Edit] [Delete]                                       │   │
+       387 -  │  ├─────────────────────────────────────────────────────────┤   │
+       388 -  │  │ [✓] Submit Project Proposal                        [✓]│   │
+       389 -  │  │     CSCI 3308                                              │   │
+       390 -  │  │     Completed: Oct 22, 4:30 PM                           │   │
+       391 -  │  │     [Edit] [Delete]                                       │   │
+       392 -  │  ├─────────────────────────────────────────────────────────┤   │
+       393 -  │  │ [ ] Prepare for Midterm                             [!]│   │
+       394 -  │  │     PHYS 1110                                              │   │
+       395 -  │  │     Due: Oct 30, 10:00 AM                                 │   │
+       396 -  │  │     [Edit] [Delete]                                       │   │
+       397 -  │  └─────────────────────────────────────────────────────────┘   │
+       398 -  │                                                                   │
+       399 -  │  [1] [2] [3] ... [10]  (Pagination)                             │
+       400 -  │                                                                   │
+       401 -  └─────────────────────────────────────────────────────────────────┘
+       367 +  ┌────────────────────────────────────────────────────────────────┐
+       368 +  │  ☄ ASTEROID THREAT TRACKER                [← Back] [Search]   │
+       369 +  ├────────────────────────────────────────────────────────────────┤
+       370 +  │                                                                │
+       371 +  │  🔴 (29075) 1950 DA                                           │
+       372 +  │  ═══════════════════════════════════════════════════════════  │
+       373 +  │                                                                │
+       374 +  │  ┌──────────────────────────────────────────────────────────┐│
+       375 +  │  │  THREAT ASSESSMENT                                        ││
+       376 +  │  │  ─────────────────────────────────────────────────────    ││
+       377 +  │  │  Threat Level: HIGH                                       ││
+       378 +  │  │  Impact Probability: 0.0029% (1 in 34,500)               ││
+       379 +  │  │  Cumulative Palermo Scale: -1.42                         ││
+       380 +  │  │  Torino Scale: 1                                          ││
+       381 +  │  └──────────────────────────────────────────────────────────┘│
+       382 +  │                                                                │
+       383 +  │  ┌──────────────────────────────────────────────────────────┐│
+       384 +  │  │  PHYSICAL CHARACTERISTICS                                 ││
+       385 +  │  │  ─────────────────────────────────────────────────────    ││
+       386 +  │  │  Estimated Diameter: 1.3 km (0.8 - 1.8 km range)         ││
+       387 +  │  │  Absolute Magnitude (H): 17.2                             ││
+       388 +  │  │  Rotation Period: 2.1216 hours                            ││
+       389 +  │  │  Spectral Type: M-type (metallic)                        ││
+       390 +  │  └──────────────────────────────────────────────────────────┘│
+       391 +  │                                                                │
+       392 +  │  ┌──────────────────────────────────────────────────────────┐│
+       393 +  │  │  ORBITAL PARAMETERS                                       ││
+       394 +  │  │  ─────────────────────────────────────────────────────    ││
+       395 +  │  │  Velocity: 15.2 km/s                                      ││
+       396 +  │  │  Closest Approach: March 16, 2032                         ││
+       397 +  │  │  Miss Distance: 0.00826 AU (1.2 million km)              ││
+       398 +  │  │  Orbital Period: 524 days                                 ││
+       399 +  │  │  Eccentricity: 0.508                                      ││
+       400 +  │  └──────────────────────────────────────────────────────────┘│
+       401 +  │                                                                │
+       402 +  │  [View Orbit Visualization]  [Add to Watchlist]               │
+       403 +  │                                                                │
+       404 +  └────────────────────────────────────────────────────────────────┘
+       405    ```
+       406    
+       407    **Elements:**
+       408 -  - Navigation bar
+       409 -  - New task button
+       410 -  - Filter options (All, Today, This Week, Completed)
+       411 -  - Sort dropdown (Due Date, Priority, Created Date)
+       412 -  - Category filter dropdown
+       413 -  - Task list with:
+       414 -    - Checkbox for completion
+       415 -    - Task title and description
+       416 -    - Associated category/course
+       417 -    - Due date/time
+       418 -    - Priority indicator icons
+       419 -    - Edit and Delete buttons
+       420 -  - Pagination controls
+       408 +  - Back button to return to list
+       409 +  - Asteroid name and designation as header
+       410 +  - Threat level indicator with color coding
+       411 +  - Three informational sections:
+       412 +    - Threat Assessment (probability, scales)
+       413 +    - Physical Characteristics (size, composition)
+       414 +    - Orbital Parameters (velocity, trajectory)
+       415 +  - Action buttons (orbit visualization, watchlist)
+       416 +  - Clean, organized layout for easy scanning
+       417    
+       418    ---
+       419    
+
+⏺ Read(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Read 150 lines
+
+⏺ Update(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Updated MilestoneSubmissions/ProjectProposal.md with 39 additions and 55 removals
+       417    
+       418    ---
+       419    
+       420 -  #### 13.4 Create/Edit Task Page
+       420 +  #### 13.4 Search Page
+       421    
+       422    ```
+       423 -  ┌─────────────────────────────────────────────────────────────────┐
+       424 -  │  [Logo]  Dashboard  Tasks  Projects  Settings  [User] Logout    │
+       425 -  ├─────────────────────────────────────────────────────────────────┤
+       426 -  │                                                                   │
+       427 -  │  Create New Task                                                 │
+       428 -  │                                                                   │
+       429 -  │  ┌───────────────────────────────────────────────────────────┐ │
+       430 -  │  │ Task Title: *                                             │ │
+       431 -  │  │ ┌───────────────────────────────────────────────────┐     │ │
+       432 -  │  │ │ Complete Lab 8                                    │     │ │
+       433 -  │  │ └───────────────────────────────────────────────────┘     │ │
+       434 -  │  │                                                             │ │
+       435 -  │  │ Description:                                                │ │
+       436 -  │  │ ┌───────────────────────────────────────────────────┐     │ │
+       437 -  │  │ │ Finish all parts of Lab 8 including creating      │     │ │
+       438 -  │  │ │ use case diagrams and wireframes...               │     │ │
+       439 -  │  │ │                                                    │     │ │
+       440 -  │  │ └───────────────────────────────────────────────────┘     │ │
+       441 -  │  │                                                             │ │
+       442 -  │  │ Category/Course: *                                         │ │
+       443 -  │  │ [CSCI 3308 - Software Dev ▼]                              │ │
+       444 -  │  │                                                             │ │
+       445 -  │  │ Due Date: *          Due Time: *                           │ │
+       446 -  │  │ [Oct 23, 2024  ▼]    [11:59 PM    ▼]                      │ │
+       447 -  │  │                                                             │ │
+       448 -  │  │ Priority:                                                   │ │
+       449 -  │  │ ( ) Low  (•) Medium  ( ) High                              │ │
+       450 -  │  │                                                             │ │
+       451 -  │  │ Reminders:                                                  │ │
+       452 -  │  │ [✓] 1 day before     [✓] 1 hour before                    │ │
+       453 -  │  │ [ ] 1 week before    [ ] At due time                       │ │
+       454 -  │  │                                                             │ │
+       455 -  │  │ Assigned to (for shared projects):                         │ │
+       456 -  │  │ [ Select team members ▼ ]                                  │ │
+       457 -  │  │                                                             │ │
+       458 -  │  │         [ Cancel ]              [ Save Task ]              │ │
+       459 -  │  │                                                             │ │
+       460 -  │  └───────────────────────────────────────────────────────────┘ │
+       461 -  │                                                                   │
+       462 -  └─────────────────────────────────────────────────────────────────┘
+       423 +  ┌────────────────────────────────────────────────────────────────┐
+       424 +  │  ☄ ASTEROID THREAT TRACKER                    [Home] [About]  │
+       425 +  ├────────────────────────────────────────────────────────────────┤
+       426 +  │                                                                │
+       427 +  │                    SEARCH ASTEROIDS                            │
+       428 +  │                                                                │
+       429 +  │  ┌──────────────────────────────────────────────────────────┐│
+       430 +  │  │  [🔍] Search by name or designation... [Search Button]  ││
+       431 +  │  └──────────────────────────────────────────────────────────┘│
+       432 +  │                                                                │
+       433 +  │  Recent Searches:                                             │
+       434 +  │  • Apophis                                                     │
+       435 +  │  • Bennu                                                       │
+       436 +  │  • 1950 DA                                                     │
+       437 +  │                                                                │
+       438 +  │  ──────────────────────────────────────────────────────────  │
+       439 +  │                                                                │
+       440 +  │  SEARCH RESULTS (showing 3 matches for "apophis")             │
+       441 +  │                                                                │
+       442 +  │  ┌──────────────────────────────────────────────────────────┐│
+       443 +  │  │  🟠 Apophis (99942 Apophis)                   [View]    ││
+       444 +  │  │  Impact Probability: 0.00067%                             ││
+       445 +  │  │  Next Approach: April 13, 2029                            ││
+       446 +  │  ├──────────────────────────────────────────────────────────┤│
+       447 +  │  │  🟡 2004 MN4 (Apophis previous designation)  [View]    ││
+       448 +  │  │  Same asteroid - historical designation                   ││
+       449 +  │  └──────────────────────────────────────────────────────────┘│
+       450 +  │                                                                │
+       451 +  └────────────────────────────────────────────────────────────────┘
+       452    ```
+       453    
+       454    **Elements:**
+       455 -  - Navigation bar
+       456 -  - Page title (Create New Task / Edit Task)
+       457 -  - Form fields:
+       458 -    - Task title (required)
+       459 -    - Description text area
+       460 -    - Category/course dropdown
+       461 -    - Due date picker
+       462 -    - Due time picker
+       463 -    - Priority radio buttons (Low/Medium/High)
+       464 -    - Reminder checkboxes
+       465 -    - Team member assignment (for shared projects)
+       466 -  - Cancel button
+       467 -  - Save button
+       455 +  - Header with navigation
+       456 +  - Search bar with prominent placement
+       457 +  - Recent searches for quick access
+       458 +  - Search results displaying:
+       459 +    - Asteroid name and alternate designations
+       460 +    - Key threat information
+       461 +    - View button to access details
+       462 +  - Clean layout for easy scanning
+       463    
+       464    ---
+       465    
+       466 -  #### 13.5 Projects Page
+       466 +  #### 13.5 About/Info Page
+       467    
+       468    ```
+       469    ┌─────────────────────────────────────────────────────────────────┐
+
+⏺ Read(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Read 100 lines
+
+⏺ Update(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Updated MilestoneSubmissions/ProjectProposal.md with 49 additions and 93 removals
+       466    #### 13.5 About/Info Page
+       467    
+       468    ```
+       469 -  ┌─────────────────────────────────────────────────────────────────┐
+       470 -  │  [Logo]  Dashboard  Tasks  Projects  Settings  [User] Logout    │
+       471 -  ├─────────────────────────────────────────────────────────────────┤
+       472 -  │                                                                   │
+       473 -  │  My Projects                         [ + New Project ]           │
+       474 -  │                                                                   │
+       475 -  │  ┌──────────────────────────────────────────────────────────┐  │
+       476 -  │  │  CSCI 3308 Group Project                          [Edit] │  │
+       477 -  │  │  Team Members: Alice, Bob, Carol, Dave                    │  │
+       478 -  │  │  Progress: ████████░░░░░░░ 60%                           │  │
+       479 -  │  │  Due: November 20, 2024                                   │  │
+       480 -  │  │                                                            │  │
+       481 -  │  │  Tasks:                                                    │  │
+       482 -  │  │  [ ] Design database schema        (Alice)       [!]     │  │
+       483 -  │  │  [✓] Create wireframes             (Bob)         [✓]     │  │
+       484 -  │  │  [ ] Implement authentication      (Carol)       [⚠]     │  │
+       485 -  │  │  [ ] Set up Docker containers      (Dave)        [⚠]     │  │
+       486 -  │  │                                                            │  │
+       487 -  │  │  [View Full Project Board]                                │  │
+       488 -  │  └──────────────────────────────────────────────────────────┘  │
+       489 -  │                                                                   │
+       490 -  │  ┌──────────────────────────────────────────────────────────┐  │
+       491 -  │  │  Physics Lab Report                               [Edit] │  │
+       492 -  │  │  Team Members: Just me                                    │  │
+       493 -  │  │  Progress: ███░░░░░░░░░░░ 30%                            │  │
+       494 -  │  │  Due: October 28, 2024                                    │  │
+       495 -  │  │                                                            │  │
+       496 -  │  │  Tasks:                                                    │  │
+       497 -  │  │  [✓] Conduct experiment                          [✓]     │  │
+       498 -  │  │  [✓] Collect data                                [✓]     │  │
+       499 -  │  │  [ ] Analyze results                             [!]     │  │
+       500 -  │  │  [ ] Write report                                [ ]     │  │
+       501 -  │  │                                                            │  │
+       502 -  │  │  [View Full Project Board]                                │  │
+       503 -  │  └──────────────────────────────────────────────────────────┘  │
+       504 -  │                                                                   │
+       505 -  └─────────────────────────────────────────────────────────────────┘
+       469 +  ┌────────────────────────────────────────────────────────────────┐
+       470 +  │  ☄ ASTEROID THREAT TRACKER                    [Home] [Search] │
+       471 +  ├────────────────────────────────────────────────────────────────┤
+       472 +  │                                                                │
+       473 +  │                  ABOUT ASTEROID THREAT TRACKER                 │
+       474 +  │                                                                │
+       475 +  │  ┌──────────────────────────────────────────────────────────┐│
+       476 +  │  │                                                            ││
+       477 +  │  │  What is Asteroid Threat Tracker?                         ││
+       478 +  │  │  ─────────────────────────────────────────────────────    ││
+       479 +  │  │  ATT is a web-based platform that monitors potentially    ││
+       480 +  │  │  hazardous near-Earth asteroids. We aggregate data from   ││
+       481 +  │  │  NASA's NEO database to provide accessible, consolidated  ││
+       482 +  │  │  threat information across multiple time horizons.        ││
+       483 +  │  │                                                            ││
+       484 +  │  │  Data Source                                               ││
+       485 +  │  │  ─────────────────────────────────────────────────────    ││
+       486 +  │  │  • NASA Near-Earth Object (NEO) API                       ││
+       487 +  │  │  • JPL SBDB (Small-Body Database)                         ││
+       488 +  │  │  • Last updated: Oct 23, 2024 10:30 AM                    ││
+       489 +  │  │                                                            ││
+       490 +  │  │  Understanding Threat Scales                               ││
+       491 +  │  │  ─────────────────────────────────────────────────────    ││
+       492 +  │  │  Torino Scale: 0-10 scale assessing impact hazard         ││
+       493 +  │  │  • 0 = No hazard                                           ││
+       494 +  │  │  • 1-4 = Normal, merits attention                         ││
+       495 +  │  │  • 5-7 = Threatening, significant attention needed        ││
+       496 +  │  │  • 8-10 = Certain collision, catastrophic consequences    ││
+       497 +  │  │                                                            ││
+       498 +  │  │  Palermo Scale: Logarithmic scale for technical risk      ││
+       499 +  │  │  assessment (-2 to +2 typical range)                       ││
+       500 +  │  │                                                            ││
+       501 +  │  │  [Learn More About Planetary Defense]                     ││
+       502 +  │  │                                                            ││
+       503 +  │  └──────────────────────────────────────────────────────────┘│
+       504 +  │                                                                │
+       505 +  │  Contact: team@asteroidthreattracker.com                      │
+       506 +  │                                                                │
+       507 +  └────────────────────────────────────────────────────────────────┘
+       508    ```
+       509    
+       510    **Elements:**
+       511 -  - Navigation bar
+       512 -  - New project button
+       513 -  - Project cards showing:
+       514 -    - Project name
+       515 -    - Team members
+       516 -    - Progress bar
+       517 -    - Due date
+       518 -    - List of tasks with assignees and status
+       519 -    - Edit button
+       520 -    - View full project board button
+       511 +  - Header with navigation back to home
+       512 +  - Application description and purpose
+       513 +  - Data source information with last update time
+       514 +  - Educational content explaining threat scales
+       515 +    - Torino Scale explanation
+       516 +    - Palermo Scale explanation
+       517 +  - External resource links
+       518 +  - Contact information
+       519 +  - Clean, informative layout
+       520    
+       521    ---
+       522    
+       523 -  #### 13.6 Settings Page
+       523 +  ### Wireframe Notes
+       524    
+       525 -  ```
+       526 -  ┌─────────────────────────────────────────────────────────────────┐
+       527 -  │  [Logo]  Dashboard  Tasks  Projects  Settings  [User] Logout    │
+       528 -  ├─────────────────────────────────────────────────────────────────┤
+       529 -  │                                                                   │
+       530 -  │  Settings                                                         │
+       531 -  │                                                                   │
+       532 -  │  ┌──────────────────────────────────────────────────────────┐  │
+       533 -  │  │  Profile Information                                      │  │
+       534 -  │  │  ───────────────────────────────────────────────────────  │  │
+       535 -  │  │  Name:       [John Doe                    ]              │  │
+       536 -  │  │  Email:      [john.doe@colorado.edu       ]              │  │
+       537 -  │  │  Password:   [Change Password]                            │  │
+       538 -  │  │                                                            │  │
+       539 -  │  │  [Update Profile]                                         │  │
+       540 -  │  └──────────────────────────────────────────────────────────┘  │
+       541 -  │                                                                   │
+       542 -  │  ┌──────────────────────────────────────────────────────────┐  │
+       543 -  │  │  Notification Preferences                                 │  │
+       544 -  │  │  ───────────────────────────────────────────────────────  │  │
+       545 -  │  │  [✓] Email notifications                                  │  │
+       546 -  │  │  [✓] Browser notifications                                │  │
+       547 -  │  │  [ ] SMS notifications (requires phone number)            │  │
+       548 -  │  │                                                            │  │
+       549 -  │  │  Default reminder time:                                    │  │
+       550 -  │  │  [✓] 1 day before   [✓] 1 hour before                    │  │
+       551 -  │  │  [ ] 1 week before  [ ] At due time                       │  │
+       552 -  │  │                                                            │  │
+       553 -  │  │  [Save Preferences]                                       │  │
+       554 -  │  └──────────────────────────────────────────────────────────┘  │
+       555 -  │                                                                   │
+       556 -  │  ┌──────────────────────────────────────────────────────────┐  │
+       557 -  │  │  Course/Category Management                               │  │
+       558 -  │  │  ───────────────────────────────────────────────────────  │  │
+       559 -  │  │  Your Courses:                                            │  │
+       560 -  │  │  • CSCI 3308 - Software Development    [Edit] [Delete]   │  │
+       561 -  │  │  • CSCI 2270 - Data Structures         [Edit] [Delete]   │  │
+       562 -  │  │  • PHYS 1110 - General Physics         [Edit] [Delete]   │  │
+       563 -  │  │                                                            │  │
+       564 -  │  │  [ + Add New Course ]                                     │  │
+       565 -  │  └──────────────────────────────────────────────────────────┘  │
+       566 -  │                                                                   │
+       567 -  └─────────────────────────────────────────────────────────────────┘
+       568 -  ```
+       569 -  
+       525    **Elements:**
+       526    - Navigation bar
+       527    - Profile information section with editable fields
+
+⏺ Read(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Read 50 lines
+
+⏺ Update(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Updated MilestoneSubmissions/ProjectProposal.md with 9 additions and 13 removals    
+       520    
+       521    ---
+       522    
+       523 -  ### Wireframe Notes
+       523 +  ### Wireframe Summary
+       524    
+       525 -  **Elements:**
+       526 -  - Navigation bar
+       527 -  - Profile information section with editable fields
+       528 -  - Notification preferences with checkboxes
+       529 -  - Default reminder settings
+       530 -  - Course/category management with add/edit/delete options
+       531 -  - Save buttons for each section
+       525 +  The application includes 5 key pages:
+       526 +  1. **Main Threat Dashboard** - Loading state with filters
+       527 +  2. **Threat List View** - Ranked asteroids with key data
+       528 +  3. **Detailed Asteroid View** - Comprehensive threat information
+       529 +  4. **Search Page** - Search by asteroid name/designation
+       530 +  5. **About Page** - Educational information about the app and threat scales
+       531    
+       532 -  ---
+       533 -  
+       534 -  ### Wireframe Notes
+       535 -  
+       532 +  **Notes:**
+       533    - All wireframes can be hand-drawn and scanned/photographed for submission
+       534    - Ensure each page of your application has a corresponding wireframe
+       535    - Include annotations for interactive elements (buttons, links, dropdowns)
+       536    - Show navigation flow between pages
+       537 -  - Consider mobile responsiveness in your design
+       537 +  - Mobile-responsive design with "pull to refresh" functionality
+       538    
+       539    ## EXTRA CREDIT: Risk Analysis
+       540    
+
+⏺ Write(TeamMeetingLogs/meeting_minutes.md)
+  ⎿  Wrote 140 lines to TeamMeetingLogs/meeting_minutes.md
+     # Team Meeting Minutes
+     **Team Number:** 16-4
+     **Team Name:** Woodwinds
+     **Project:** Asteroid Threat Tracker (ATT)
+     ---
+     ## Meeting 1: Lab 8 - Project Kickoff
+     … +130 lines (ctrl+o to expand)
+
+⏺ Read(README.md)
+  ⎿  Read 96 lines
+
+⏺ Update(README.md)
+  ⎿  Updated README.md with 5 additions and 3 removals                                                                            
+       1 -  # [Application Name]
+       1 +  # Asteroid Threat Tracker (ATT)
+       2    
+       3    ## Team Information
+       4    
+     ...
+       14    
+       15    ## Project Description
+       16    
+       17 -  [Brief 2-3 paragraph description of your application, its purpose, and the value it provides to users]
+       17 +  The Asteroid Threat Tracker (ATT) is a web-based application designed to monitor and display information about 
+          + potentially hazardous near-Earth asteroids that pose threats to our planet. By aggregating data from NASA's Near-Earth
+          +  Object (NEO) API and other astronomical databases, ATT serves as a centralized platform for tracking celestial 
+          + threats and raising public awareness about planetary defense.
+       18    
+       19 +  The application features an intuitive interface that allows users to filter asteroid threats by different time 
+          + periods (2030-2200), categorize asteroids by threat level, and view detailed information about each near-Earth object 
+          + including size, velocity, trajectory, and impact probability. Users can explore comprehensive threat data in an 
+          + accessible format designed for space enthusiasts, educators, students, and the general public.
+       20 +  
+       21    ## Vision Statement
+       22    
+       23 -  For [target customer], who [statement of need], [product name] is a [product category] that [key benefit]. Unlike 
+          - [primary competitive alternative], our product [statement of primary differentiation].
+       23 +  For space enthusiasts and the general public, who want to stay informed about potentially hazardous near-Earth 
+          + asteroids but find existing data sources too technical and fragmented, Asteroid Threat Tracker is a web-based 
+          + monitoring platform that provides accessible, consolidated information about Earth-threatening asteroids across 
+          + multiple time horizons. Unlike NASA's technical JPL databases or complex astronomical software, our product presents 
+          + threat data in an intuitive, visually engaging format that anyone can understand, with the ability to explore asteroid
+          +  risks from the present day through the year 2200.
+       24    
+       25    ## Technology Stack
+       26    
+
+⏺ Update(README.md)
+  ⎿  Updated README.md with 1 addition                           
+       27    - **Frontend:** HTML, CSS, JavaScript
+       28    - **Backend:** Node.js, Express
+       29    - **Database:** PostgreSQL
+       30 +  - **External API:** NASA Near-Earth Object (NEO) API
+       31    - **Containerization:** Docker
+       32    - **Version Control:** Git/GitHub
+       33    
+
+⏺ Bash(git add . && git commit -m "Adding project proposal for Lab 8…)
+  ⎿  Error: On branch main
+     Your branch and 'origin/main' have diverged,
+     and have 2 and 2 different commits each, respectively.
+
+     nothing to commit, working tree clean
+
+⏺ Bash(git status)
+  ⎿  On branch main                                        
+     Your branch and 'origin/main' have diverged,
+     and have 2 and 2 different commits each, respectively.
+     … +3 lines (ctrl+o to expand)
+
+⏺ Bash(git pull --rebase && git push)
+  ⎿  Updating 3c9617e..e90f890    
+     Fast-forward
+      ReadMe.md | 9 +++++++++
+     … +4 lines (ctrl+o to expand)
+
+⏺ Bash(git log --oneline -5)
+  ⎿  e90f890 Merge pull request #2 from CU-CSCI3308-Fall2025/mawo
+     148eb00 Merge branch 'main' into mawo
+     6119339 extra credit
+     … +2 lines (ctrl+o to expand)
+
+⏺ Bash(ls -la && ls -la TeamMeetingLogs/ && ls -la MilestoneSubmissions/ && ls -la ProjectSourceCode/)
+  ⎿  total 16                                                
+     drwxr-xr-x@  8 reedcolloton  staff   256 Oct 23 18:33 .
+     drwxr-xr-x  16 reedcolloton  staff   512 Oct 23 18:33 ..
+     … +18 lines (ctrl+o to expand)
+
+⏺ Perfect! I've successfully completed all the Lab 8 requirements for your group project. Here's a comprehensive summary of what was
+  created:
+
+  ✅ Completed Deliverables
+
+  Repository Structure
+
+  - TeamMeetingLogs/ - Contains meeting_minutes.md template with your first meeting logged
+  - MilestoneSubmissions/ - Contains ProjectProposal.md with all deliverables
+  - ProjectSourceCode/ - Contains .gitignore file
+  - README.md - Updated with Asteroid Threat Tracker details
+
+  Project Proposal (MilestoneSubmissions/ProjectProposal.md)
+
+  Sections 1-11: Core Information
+  1. ✅ Team Number: 16-4
+  2. ✅ Team Name: Woodwinds (updated to "Woodwinds in Space" by your team)
+  3. ✅ Team Members: Kelsea Hall, Mark Worster, Reed Colloton, Zachary McGuire
+  4. ✅ Application Name: Asteroid Threat Tracker (ATT)
+  5. ✅ Application Description: 3 paragraphs covering purpose, features, and scope
+  6. ✅ Audience: Space enthusiasts, educators, students, general public
+  7. ✅ Vision Statement: Complete with target customer, need, and differentiation
+  8. ✅ Version Control: Repository structure documented
+  9. ✅ Development Methodology: Agile/Scrum with Kanban boards
+  10. ✅ Communication Plan: Email, group chats, Zoom
+  11. ✅ Meeting Plan: Team and TA meetings documented
+
+  Section 12: Use Case Diagram
+  ✅ 7 key use cases with full descriptions:
+  - View Asteroid Threat List
+  - Filter by Time Period
+  - View Detailed Asteroid Information
+  - Categorize Threats
+  - Refresh Data
+  - Browse Historical Data
+  - Search Asteroids
+
+  Section 13: Wireframes
+  ✅ 5 complete wireframes with detailed elements:
+  1. Main Threat Dashboard (loading state)
+  2. Threat List View (data loaded with asteroid cards)
+  3. Detailed Asteroid View (comprehensive threat info)
+  4. Search Page (search functionality)
+  5. About/Info Page (educational content)
+
+  Extra Credit
+  ✅ 5 project risks with severity levels and detailed mitigation strategies covering:
+  - Team Member Availability
+  - Technical Complexity
+  - Scope Creep
+  - Integration Issues
+  - Version Control Conflicts
+
+  Additional Files
+
+  - ✅ .gitignore in ProjectSourceCode folder
+  - ✅ Meeting minutes template with first meeting documented
+  - ✅ README.md updated with project description and team info
+
+  📋 Grading Criteria Status
+
+  Meets Expectations:
+  - ✅ All required folders created
+  - ✅ Sections 1-11 complete with details
+  - ✅ Use case diagram with 7 features (exceeds 6 minimum)
+  - ✅ Wireframes for all 5 application pages
+  - ✅ Extra credit: 5 risks with severity and mitigation
+
+  Exceeds Expectations:
+  - ✅ Extra credit completed
+
+  🎯 Next Steps
+
+  To get full credit, you need to:
+  1. Show this work to your TA during lab (as mentioned in grading specs)
+  2. Verify team member information is correct in all documents
+  3. The TA will mark your attendance on Canvas
+
+  All files are committed and synced with GitHub. Your repository is ready for TA review!
+
+> Vision statement: Raising awareness about dangerous asteroids in a kid-friendly manner
+Team name: Woodwinds
+Application Name: Asteroid Detector 3000
+Target Audience: Middle school aged kids
+Application Description: The main page provides a list of asteroids most likely to hit Earth in the next several thousand years, and 
+how much damage they could do. Other features would allow users to be given more data about a chosen asteroid, and charts that 
+explain details about asteroids.
+Communication plan: We have a text chat, and plan to meet weekly over Zoom
+5 potential risks:
+1) If the website isn’t intuitive to use. This could prevent some people from using it, but this could be mitigated with icons and 
+putting all links in the nav bar.
+2) If the external API we’re using changes or goes down. This would completely brick our website, so we’ll make a backup database 
+copy just in case 
+3) If our calculations end up being completely wrong. This wouldn’t make the application stop working, but providing misleading or 
+incorrect estimates about asteroid risk wouldn’t be ideal. At the very least, we’ll check a few calculations with what scientists 
+have made to make sure we’re in the right ballpark. 
+4) If we get rate-limited by the external API. This could cause our website to slow down or stop working completely, so we’d need to 
+figure out what that limit is, and slow down requests if we get close to it.
+5) If we get caught up in scope creep. This would hurt our ability to get out a working, complete project by the deadline, so we’ll 
+need to make sure to have a minimum viable product with plenty of time to spare. Project Overview
+1: Project Overview
+1: Team Number: 16-4
+2. Team Name: Woodwind in Space
+3. Team Members: Kelsea Hall, Mark Worster, Reed Colloton, Zachary McGuire
+4. Application Name: Asteroid Detector 3000
+5. Target Audience: Middle School aged kids
+6. Application Description: The main page provides a list of asteroids most likely to hit Earth in the next several thousand years, 
+and how much damage they could do. Other features would allow users to be given more data about a chosen asteroid, and charts that 
+explain details about asteroids.
+7. Vision statement: Raising awareness about dangerous asteroids in a kid-friendly manner
+8. Version Control: waiting
+9. Development Method: waiting
+10. Communication Plan: We have a text chat, and plan to meet weekly over Zoom 
+11. Meeting Plan: Friday at 11-11:15 on zoomadd this info to proposal and readme where needed. do not change words 
+
+⏺ I'll update the ProjectProposal.md and README.md files with your exact information.
+
+⏺ Read(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Read 50 lines
+
+⏺ Update(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Updated MilestoneSubmissions/ProjectProposal.md with 1 addition and 1 removal
+        4    **Team Number:** 16-4
+        5    
+        6    ## 2. Team Name
+        7 -  **Team Name:** Woodwinds
+        7 +  **Team Name:** Woodwind in Space
+        8    
+        9    ## 3. Team Members
+       10    **Team Members:**
+
+⏺ Update(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Updated MilestoneSubmissions/ProjectProposal.md with 1 addition and 1 removal
+       14    - Zachary McGuire  -  ZackMcGuire    -  zamc6801@colorado.edu 
+       15    
+       16    ## 4. Application Name
+       17 -  **Application Name:** Asteroid Threat Tracker
+       17 +  **Application Name:** Asteroid Detector 3000
+       18    
+       19    ## 5. Application Description
+       20    
+
+⏺ Update(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Updated MilestoneSubmissions/ProjectProposal.md with 1 addition and 5 removals                                               
+       18    
+       19    ## 5. Application Description
+       20    
+       21 -  The Asteroid Threat Tracker (ATT) is a web-based application designed to monitor and display information about 
+          - potentially hazardous near-Earth asteroids that pose threats to our planet. The application provides users with 
+          - comprehensive data about asteroid trajectories, impact probabilities, and threat assessments across multiple time 
+          - horizons. By aggregating data from space agencies and astronomical databases, ATT serves as a centralized platform for
+          -  tracking celestial threats and raising public awareness about planetary defense.
+       21 +  The main page provides a list of asteroids most likely to hit Earth in the next several thousand years, and how much 
+          + damage they could do. Other features would allow users to be given more data about a chosen asteroid, and charts that 
+          + explain details about asteroids.
+       22    
+       23 -  The application features an intuitive interface that allows users to filter asteroid threats by different time 
+          - periods (2030, 2040, 2050, 2075, 2100, 2150, and 2200), categorize asteroids by threat level ("Top Threats" vs "High 
+          - Chance"), and view detailed information about each near-Earth object including size, velocity, trajectory, and impact 
+          - probability. Users can explore the "Top 10 Earth Threat Asteroids" through an interactive display that presents 
+          - critical data in an accessible format. The system will pull real-time data from NASA's Near-Earth Object (NEO) API and
+          -  other astronomical data sources, storing historical records in a database for trend analysis and comparison.
+       24 -  
+       25 -  Within the 4-week development cycle, we will implement the core data retrieval and display functionality, database 
+          - integration for storing asteroid information, user interface with temporal filtering capabilities, and a responsive 
+          - design that works across devices. The application will be built using Node.js/Express for the backend API layer, 
+          - PostgreSQL for persistent data storage, HTML/CSS/JavaScript for the frontend, and will integrate with NASA's NEO API 
+          - as an external data source. All components will be containerized using Docker to ensure portability and consistent 
+          - deployment across different environments.
+       26 -  
+       23    ## 6. Audience
+       24    
+       25    **Target User Profile:**
+
+⏺ Update(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Updated MilestoneSubmissions/ProjectProposal.md with 1 addition and 14 removals                                              
+       22    
+       23    ## 6. Audience
+       24    
+       25 -  **Target User Profile:**
+       25 +  **Target Audience:** Middle school aged kids
+       26    
+       27 -  **Who:** Space enthusiasts, educators, students, science journalists, and general public interested in astronomy and 
+          - planetary defense. The primary demographic ranges from high school students to adults of all ages who have an interest
+          -  in space science but may not have advanced technical or astronomical knowledge. Secondary users include science 
+          - teachers looking for educational resources and amateur astronomers tracking near-Earth objects.
+       28 -  
+       29 -  **Problem Being Solved:** Information about potentially hazardous asteroids is scattered across multiple technical 
+          - sources like NASA's JPL database, scientific papers, and specialized astronomical software. This data is often 
+          - presented in technical formats that are difficult for non-experts to interpret and compare. There is no centralized, 
+          - user-friendly platform that presents asteroid threat information in an accessible way while allowing users to explore 
+          - threats across different time horizons. People interested in planetary defense and space threats lack a simple tool to
+          -  understand which asteroids pose the greatest risks and when.
+       30 -  
+       31 -  **Usability & Accessibility Considerations:**
+       32 -  - Clean, intuitive interface that doesn't require astronomical expertise to navigate
+       33 -  - Clear visual indicators for threat levels using color coding and icons
+       34 -  - Mobile-responsive design for users to check asteroid information on any device
+       35 -  - Simple temporal navigation allowing quick switching between time periods
+       36 -  - Accessible data presentation with both visual and textual information
+       37 -  - Fast loading times and efficient data presentation to maintain user engagement
+       38 -  - "Pull to refresh" functionality for mobile users to get latest data updates
+       39 -  
+       27    ## 7. Vision Statement
+       28    
+       29    For space enthusiasts and the general public, who want to stay informed about potentially hazardous near-Earth 
+            asteroids but find existing data sources too technical and fragmented, Asteroid Threat Tracker is a web-based 
+            monitoring platform that provides accessible, consolidated information about Earth-threatening asteroids across 
+            multiple time horizons. Unlike NASA's technical JPL databases or complex astronomical software, our product presents 
+            threat data in an intuitive, visually engaging format that anyone can understand, with the ability to explore asteroid
+             risks from the present day through the year 2200.
+
+⏺ Update(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Updated MilestoneSubmissions/ProjectProposal.md with 1 addition and 1 removal                                                
+       26    
+       27    ## 7. Vision Statement
+       28    
+       29 -  For space enthusiasts and the general public, who want to stay informed about potentially hazardous near-Earth 
+          - asteroids but find existing data sources too technical and fragmented, Asteroid Threat Tracker is a web-based 
+          - monitoring platform that provides accessible, consolidated information about Earth-threatening asteroids across 
+          - multiple time horizons. Unlike NASA's technical JPL databases or complex astronomical software, our product presents 
+          - threat data in an intuitive, visually engaging format that anyone can understand, with the ability to explore asteroid
+          -  risks from the present day through the year 2200.
+       29 +  Raising awareness about dangerous asteroids in a kid-friendly manner
+       30    
+       31    ## 8. Version Control
+       32    
+
+⏺ Read(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Read 80 lines
+
+⏺ Read(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Read 35 lines
+
+⏺ Update(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Updated MilestoneSubmissions/ProjectProposal.md with 1 addition and 20 removals                                             
+        79    
+        80    ## 10. Communication Plan
+        81    
+        82 -  **Primary Communication Tool:** [Slack/Discord/MS Teams/Google Groups - Choose one]
+        82 +  We have a text chat, and plan to meet weekly over Zoom
+        83    
+        84 -  **Communication Channels:**
+        85 -  - **#general:** Team announcements and general discussion
+        86 -  - **#development:** Technical discussions, code-related questions
+        87 -  - **#meetings:** Meeting agendas and notes
+        88 -  - **GitHub:** All code-related discussions will be tracked as comments on issues/pull requests
+        89 -  
+        90 -  **Response Expectations:**
+        91 -  - Team members should check the communication channel at least once daily
+        92 -  - Urgent issues should be responded to within 4 hours
+        93 -  - All team members should be available during scheduled meeting times
+        94 -  
+        95 -  **Documentation:**
+        96 -  - Meeting notes will be documented in TeamMeetingLogs/meeting_minutes.md
+        97 -  - Technical decisions will be documented in GitHub issue comments
+        98 -  - Code changes will be explained in pull request descriptions
+        99 -  
+       100 -  **Example:**
+       101 -  > We will use Discord as our primary communication tool. We have created a dedicated server with channels for 
+           - general discussion, development questions, and meeting coordination. All team members are expected to check Discord 
+           - at least once per day and respond to urgent messages within 4 hours. For project-specific tasks and technical 
+           - discussions, we will use GitHub issues and pull request comments to maintain a clear record of decisions and 
+           - progress.
+       102 -  
+        84    ## 11. Meeting Plan
+        85    
+        86    ### Team Meetings
+
+⏺ Update(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Updated MilestoneSubmissions/ProjectProposal.md with 1 addition and 40 removals                                              
+        83    
+        84    ## 11. Meeting Plan
+        85    
+        86 -  ### Team Meetings
+        86 +  Friday at 11-11:15 on zoom
+        87    
+        88 -  **Frequency:** [Twice weekly / Three times per week / As needed]
+        89 -  
+        90 -  **Schedule:**
+        91 -  - **Day(s):** [e.g., Tuesdays and Thursdays]
+        92 -  - **Time:** [e.g., 5:00 PM - 6:00 PM]
+        93 -  - **Duration:** [e.g., 1 hour]
+        94 -  - **Modality:** [Face-to-face / Zoom / Google Meet]
+        95 -  - **Location:** [e.g., Engineering Center, Room 1B33 / Zoom link: [insert link]]
+        96 -  
+        97 -  **Agenda Format:**
+        98 -  1. Sprint progress review (10 min)
+        99 -  2. Blocker discussion (10 min)
+       100 -  3. Technical problem-solving (20 min)
+       101 -  4. Sprint planning for next period (15 min)
+       102 -  5. Action items and task assignments (5 min)
+       103 -  
+       104 -  ### Weekly TA Meeting
+       105 -  
+       106 -  **Frequency:** Once per week
+       107 -  
+       108 -  **Schedule:**
+       109 -  - **Day:** [e.g., Wednesday]
+       110 -  - **Time:** [e.g., 3:00 PM - 3:30 PM]
+       111 -  - **Duration:** 30 minutes
+       112 -  - **Modality:** [Face-to-face / Zoom / Google Meet]
+       113 -  - **Location:** [e.g., CSEL Lab / Zoom link: [insert link]]
+       114 -  
+       115 -  **Meeting Expectations:**
+       116 -  - All team members must attend unless prior approval is obtained
+       117 -  - We will prepare a brief demo of completed work
+       118 -  - Meeting minutes will be documented in TeamMeetingLogs/meeting_minutes.md
+       119 -  - We will discuss progress, blockers, and get feedback from the TA
+       120 -  - Action items will be assigned for the following week
+       121 -  
+       122 -  **Example:**
+       123 -  > **Team Meetings:** We will meet three times per week - Mondays, Wednesdays, and Fridays from 4:00 PM to 5:00 PM 
+           - via Zoom. The Monday meeting will focus on sprint planning, Wednesday will be a mid-sprint check-in, and Friday will 
+           - be sprint review and retrospective.
+       124 -  >
+       125 -  > **TA Meeting:** Our weekly meeting with the TA is scheduled for Thursdays at 2:00 PM in the CSEL Lab. All team 
+           - members are expected to attend and contribute to the discussion. We will demo our progress, discuss any technical 
+           - challenges, and receive feedback on our implementation.
+       126 -  
+        88    ## 12. Use Case Diagram
+        89    
+        90    ### High-Level Use Cases
+
+⏺ Read(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Read 0 lines
+
+⏺ Read(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Read 43 lines
+
+⏺ Update(MilestoneSubmissions/ProjectProposal.md)
+  ⎿  Updated MilestoneSubmissions/ProjectProposal.md with 5 additions and 5 removals                                              
+       192    
+       193    | Risk # | Risk Description | Severity | Mitigation Strategy |
+       194    |--------|-----------------|----------|---------------------|
+       195 -  | 1 | **Team Member Availability** - Team members may have conflicting schedules or unexpected absences, impacting 
+           - project timeline | High | - Establish clear communication protocols and redundancy in task assignments<br>- 
+           - Cross-train team members on different components<br>- Maintain detailed documentation so anyone can pick up 
+           - tasks<br>- Schedule regular check-ins to identify availability issues early<br>- Use asynchronous communication tools
+           -  for coordination |
+       196 -  | 2 | **Technical Complexity** - Docker containerization and database integration may be more complex than 
+           - anticipated, causing delays | High | - Allocate extra time in sprint planning for technical learning<br>- Begin with 
+           - Docker setup and database schema early in the project<br>- Leverage TA office hours and online resources for 
+           - technical guidance<br>- Create proof-of-concept implementations before full feature development<br>- Have backup 
+           - simpler approaches if complex solutions prove too time-consuming |
+       197 -  | 3 | **Scope Creep** - Team may be tempted to add features beyond the original scope, jeopardizing core 
+           - functionality completion | Medium | - Clearly define MVP (Minimum Viable Product) features in first sprint<br>- 
+           - Maintain a "future features" backlog separate from current sprint<br>- Require team consensus before adding new 
+           - features<br>- Prioritize core requirements outlined in project guide<br>- Use weekly TA meetings to validate scope 
+           - decisions |
+       198 -  | 4 | **Integration Issues** - Frontend, backend, and database components may have compatibility problems when 
+           - integrated | Medium | - Define clear API contracts and data schemas upfront<br>- Use mock data and API stubs for 
+           - parallel development<br>- Implement continuous integration testing early<br>- Schedule integration testing sessions 
+           - before final deadline<br>- Conduct integration work in small, incremental steps rather than "big bang" approach |
+       199 -  | 5 | **Version Control Conflicts** - Multiple team members working on the same codebase may lead to merge conflicts
+           -  and lost work | Medium | - Follow strict branching strategy (feature branches, PR reviews)<br>- Establish coding 
+           - standards and file organization conventions<br>- Communicate actively about which files are being edited<br>- Commit 
+           - and push changes frequently<br>- Designate one team member as "merge master" to resolve complex conflicts<br>- Use 
+           - pull request reviews before merging to main branch |
+       195 +  | 1 | If the website isn't intuitive to use. This could prevent some people from using it. | Medium | This could be 
+           + mitigated with icons and putting all links in the nav bar. |
+       196 +  | 2 | If the external API we're using changes or goes down. This would completely brick our website. | High | We'll 
+           + make a backup database copy just in case. |
+       197 +  | 3 | If our calculations end up being completely wrong. This wouldn't make the application stop working, but 
+           + providing misleading or incorrect estimates about asteroid risk wouldn't be ideal. | Medium | At the very least, 
+           + we'll check a few calculations with what scientists have made to make sure we're in the right ballpark. |
+       198 +  | 4 | If we get rate-limited by the external API. This could cause our website to slow down or stop working 
+           + completely. | High | We'd need to figure out what that limit is, and slow down requests if we get close to it. |
+       199 +  | 5 | If we get caught up in scope creep. This would hurt our ability to get out a working, complete project by the 
+           + deadline. | Medium | We'll need to make sure to have a minimum viable product with plenty of time to spare. |
+       200    
+       201    
+       202    ## Submission Checklist
+
+⏺ Read(README.md)
+  ⎿  Read 97 lines
+
+⏺ Update(README.md)
+  ⎿  Updated README.md with 2 additions and 2 removals                     
+        1 -  # Asteroid Threat Tracker
+        1 +  # Asteroid Detector 3000
+        2    
+        3    ## Team Information
+        4    
+        5    **Team Number:** 16-4
+        6    
+        7 -  **Team Name:** Woodwinds in Space
+        7 +  **Team Name:** Woodwind in Space
+        8    
+        9    **Team Members:**
+       10    - Kelsea Hall      -  keha5124       -  keha5124@colorado.edu 
+
+⏺ Update(README.md)
+  ⎿  Updated README.md with 1 addition and 3 removals                                                                             
+       14    
+       15    ## Project Description
+       16    
+       17 -  The Asteroid Threat Tracker (ATT) is a web-based application designed to monitor and display information about 
+          - potentially hazardous near-Earth asteroids that pose threats to our planet. By aggregating data from NASA's Near-Earth
+          -  Object (NEO) API and other astronomical databases, ATT serves as a centralized platform for tracking celestial 
+          - threats and raising public awareness about planetary defense.
+       17 +  The main page provides a list of asteroids most likely to hit Earth in the next several thousand years, and how much 
+          + damage they could do. Other features would allow users to be given more data about a chosen asteroid, and charts that 
+          + explain details about asteroids.
+       18    
+       19 -  The application features an intuitive interface that allows users to filter asteroid threats by different time 
+          - periods (2030-2200), categorize asteroids by threat level, and view detailed information about each near-Earth object 
+          - including size, velocity, trajectory, and impact probability. Users can explore comprehensive threat data in an 
+          - accessible format designed for space enthusiasts, educators, students, and the general public.
+       20 -  
+       19    ## Vision Statement
+       20    
+       21    For space enthusiasts and the general public, who want to stay informed about potentially hazardous near-Earth 
+            asteroids but find existing data sources too technical and fragmented, Asteroid Threat Tracker is a web-based 
+            monitoring platform that provides accessible, consolidated information about Earth-threatening asteroids across 
+            multiple time horizons. Unlike NASA's technical JPL databases or complex astronomical software, our product presents 
+            threat data in an intuitive, visually engaging format that anyone can understand, with the ability to explore asteroid
+             risks from the present day through the year 2200.
+
+⏺ Update(README.md)
+  ⎿  Updated README.md with 1 addition and 1 removal                                                                              
+       18    
+       19    ## Vision Statement
+       20    
+       21 -  For space enthusiasts and the general public, who want to stay informed about potentially hazardous near-Earth 
+          - asteroids but find existing data sources too technical and fragmented, Asteroid Threat Tracker is a web-based 
+          - monitoring platform that provides accessible, consolidated information about Earth-threatening asteroids across 
+          - multiple time horizons. Unlike NASA's technical JPL databases or complex astronomical software, our product presents 
+          - threat data in an intuitive, visually engaging format that anyone can understand, with the ability to explore asteroid
+          -  risks from the present day through the year 2200.
+       21 +  Raising awareness about dangerous asteroids in a kid-friendly manner
+       22    
+       23    ## Technology Stack
+       24    
+
+⏺ Update(README.md)
+  ⎿  Updated README.md with 2 additions and 4 removals                                           
+       76    
+       77    ## Communication
+       78    
+       79 -  **Primary Tool:** Email, Group chats
+       79 +  We have a text chat, and plan to meet weekly over Zoom
+       80    
+       81 -  **Team Meetings:** Zoom
+       81 +  **TA Meetings:** Friday at 11-11:15 on zoom
+       82    
+       83 -  **TA Meetings:** Zoom, Fridays at 11 am
+       83    
+       84 -  
+       84    This project is created for educational purposes as part of CSCI 3308 at CU Boulder.
+       85    
+       86    five potential risks:
+
+⏺ Update(README.md)
+  ⎿  Updated README.md with 5 additions and 5 removals                                                                            
+       85    
+       86    five potential risks:
+       87    
+       88 -  1. If the website isn't intuitive to use. This could prevent people from using it. To prevent this we could use 
+          -  icons and have all the links in the nav bar
+       89 -  2. If the external API changes or goes down. This would completely brick out website. To prevent this we'll back up 
+          -  our database
+       90 -  3. If our calculations are completely wrong. This would provide misleading information to the users. To prevent this 
+          - we will double check our calculations with what scientists say.
+       91 -  4. If we get rate-limited by an external API. This could cause our website to slow down or stop working completely. 
+          -  To prevent this we figure out what the limit is and manage requests if we get close to it.
+       92 -  5. If we get caught up in scope creep. This could show down out project speed and risk missing the deadline. To 
+          -  prevent this we will make sure we have the minimum product complete with plenty of time left
+       88 +  1. If the website isn't intuitive to use. This could prevent some people from using it, but this could be 
+          +  mitigated with icons and putting all links in the nav bar.
+       89 +  2. If the external API we're using changes or goes down. This would completely brick our website, so we'll make a 
+          +  backup database copy just in case
+       90 +  3. If our calculations end up being completely wrong. This wouldn't make the application stop working, but providing 
+          + misleading or incorrect estimates about asteroid risk wouldn't be ideal. At the very least, we'll check a few 
+          + calculations with what scientists have made to make sure we're in the right ballpark.
+       91 +  4. If we get rate-limited by the external API. This could cause our website to slow down or stop working completely, 
+          +  so we'd need to figure out what that limit is, and slow down requests if we get close to it.
+       92 +  5. If we get caught up in scope creep. This would hurt our ability to get out a working, complete project by
+          +   the deadline, so we'll need to make sure to have a minimum viable product with plenty of time to spare.
+
+⏺ Bash(git add . && git commit -m "Update project details with team's specific information…)
+  ⎿  [main babab81] Update project details with team's specific information
+      2 files changed, 26 insertions(+), 111 deletions(-)
+     To https://github.com/CU-CSCI3308-Fall2025/group-project-reed-colloton
+        e90f890..babab81  main -> main
+
+⏺ Perfect! I've updated both the ProjectProposal.md and README.md files with your team's specific information. Here's what was
+  changed:
+
+  Updates Made:
+
+  ProjectProposal.md
+
+  1. Team Name: Woodwind in Space
+  2. Application Name: Asteroid Detector 3000
+  3. Application Description: Simplified to your exact wording about the main page and features
+  4. Audience: Middle school aged kids
+  5. Vision Statement: Raising awareness about dangerous asteroids in a kid-friendly manner
+  6. Communication Plan: We have a text chat, and plan to meet weekly over Zoom
+  7. Meeting Plan: Friday at 11-11:15 on zoom
+  8. 5 Risks: Updated with your exact wording for all 5 risks
+
+  README.md
+
+  1. Title: Asteroid Detector 3000
+  2. Team Name: Woodwind in Space
+  3. Project Description: Updated to match your wording
+  4. Vision Statement: Updated to match your wording
+  5. Communication: Updated with your plan
+  6. TA Meetings: Friday at 11-11:15 on zoom
+  7. Five potential risks: Updated with your exact wording
+
+  All changes have been committed and pushed to GitHub. The files now contain your team's exact wording as requested!
+
+
+
