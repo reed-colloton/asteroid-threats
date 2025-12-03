@@ -201,13 +201,15 @@ We have designed wireframes for the key pages of our application.
 - `Fun facts.jpg`: Educational content page.
 
 **Additional Wireframes:**
-Please refer to `MilestoneSubmissions/Wireframes/Wireframe_Descriptions.md` for detailed layouts of the following pages:
+Please refer to `MilestoneSubmissions/Wireframes/Wireframes.md` for detailed layouts of the following pages:
 
 1.  **Main Dashboard (Threat List):** The central hub showing the list of asteroids.
 2.  **Asteroid Detail Page:** The specific view for a single asteroid.
 3.  **Historical Data View:** The page for browsing past data.
+4.  **Login Page:** User authentication.
+5.  **Register Page:** New user registration.
 
-[Link to Wireframe Descriptions](./Wireframes/Wireframe_Descriptions.md)
+[Link to Wireframes](./Wireframes/Wireframes.md)
 
 ## EXTRA CREDIT: Risk Analysis
 
